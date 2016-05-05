@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:ftl="http://www.milyn.org/xsd/smooks/freemarker-1.1.xsd">
+  <params>
+    <param name="stream.filter.type">SAX</param>
+    <param name="inputType">input.xml</param>
+    <param name="input.xml" type="input.type.actived">Workspace://loyaltyEDI/src/output/850_Order_Original.xml</param>
+  </params>
+  <ftl:freemarker applyOnElement="#document">
+   <ftl:template><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<shipped_orders>
+<#assign x = .vars["Order"]["PurchaseOrder/PurchaseOrderNumber"]?size>
+<#list 0..x as i>
+<#if .vars["Order"]["PurchaseOrder/PurchaseOrderNumber"][i]!?has_content>
+    <order>
+        <po_number>${.vars["Order"]["PurchaseOrder/PurchaseOrderNumber"][i]!}</po_number>     
+     	<first_name>${(.vars["Order"]["ShipToName/Name"][i]!?split(" "))[0]!}</first_name>
+     	<last_name>${(.vars["Order"]["ShipToName/Name"][i]!?split(" "))[1]!}</last_name>       
+        <client_street>${.vars["Order"]["ShipToAddressInformation/AddressInformation"][i]!}</client_street>        
+        <client_city>${.vars["Order"]["ShipToGeographicalLocation/CityName"][i]!}</client_city>        
+        <client_province>${.vars["Order"]["ShipToGeographicalLocation/State"][i]!}</client_province>        
+        <client_postal_code>${.vars["Order"]["ShipToGeographicalLocation/Postal"][i]!}</client_postal_code>     
+        <client_order_id></client_order_id>
+        <client_other_id></client_other_id>
+        <client_number></client_number>
+        <client_product_number></client_product_number>   
+        <quantity>${.vars["Order"]["BaselineItemData/QuantityOrdered"][i]!}</quantity>        
+        <ls_product_id>${.vars["Order"]["BaselineItemData/VendorPartNumber"][i]!}</ls_product_id>        
+        <product_title>${.vars["Order"]["ProductDescription/ProductDescription"][i]!}</product_title>   
+        <cost></cost>
+        <shipping_cost></shipping_cost>
+        <tracking_number></tracking_number>
+        <shipping_company></shipping_company>
+        <shipped_date></shipped_date>     
+    </order>
+</#if>    
+</#list>   
+</shipped_orders>]]></ftl:template>
+
+    <param name="modelSrcType">XML</param>
+    <param name="messageType">XML</param>
+    <param name="templateDataProvider">input</param>
+  </ftl:freemarker>
+  <resource-config selector="#document">
+    <resource>org.milyn.delivery.DomModelCreator</resource>
+  </resource-config>
+</smooks-resource-list>

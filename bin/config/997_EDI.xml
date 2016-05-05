@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medi:edimap xmlns:medi="http://www.milyn.org/schema/edi-message-mapping-1.2.xsd">
+<!--  <medi:import resource="input-message.edi" namespace="un" truncatableFields="true" truncatableComponents="true" /> -->
+	<medi:description name="Confirm" version="1.0" />
+	<!-- "&#126;" code for tilde(~)  -->
+	<medi:delimiters segment="&#126;" field="*" component="^" sub-component=""/>
+	<medi:segments xmltag="Confirm">
+		<!--01 ISA Segment – Interchange Control Header Detail-->
+		<medi:segment segcode="ISA" xmltag="InterchangeControlHeaderDetail" >
+			<!--01 Authorization Information Qualifier-->
+			<medi:field xmltag="AuthorizationInformationQualifier" />
+			<!--02 Authorization Information-->
+			<medi:field xmltag="AuthorizationInformation" />
+			<!--03 Security Information Qualifier-->
+			<medi:field xmltag="SecurityInformationQualifier" />	
+			<!--04 Security Information-->
+			<medi:field xmltag="SecurityInformation" />
+			<!--05 Interchange ID Qualifier- Sender-->
+			<medi:field xmltag="InterchangeIDQualifierSender" />
+			<!--06 Interchange Sender ID-->
+			<medi:field xmltag="InterchangeSenderID" />
+			<!--07 Interchange ID Qualifier-->
+			<medi:field xmltag="InterchangeIDQualifier" />
+			<!--08 Interchange Receiver ID-->
+			<medi:field xmltag="InterchangeReceiverID" />	
+			<!--09 Interchange Date-->
+			<medi:field xmltag="InterchangeDate" />
+			<!--10 Interchange Time-->
+			<medi:field xmltag="InterchangeTime" />
+			<!--11 Interchange Control Standards Identifier-->
+			<medi:field xmltag="InterchangeControlStandardsIdentifier" />
+			<!--12 Interchange Control Version Number-->
+			<medi:field xmltag="InterchangeControlVersionNumber" />
+			<!--13 Interchange Control Number-->
+			<medi:field xmltag="InterchangeControlNumber" />
+			<!--14 Acknowledgement Requested-->
+			<medi:field xmltag="AcknowledgementRequested" />
+			<!--15 Test Indicator-->
+			<medi:field xmltag="TestIndicator" />
+			<!--16 Sub-element Separator-->
+			<medi:field xmltag="SubElementSeparator" />
+		</medi:segment>
+		
+		<!--02 GS Segment - Functional Group Header-->
+		<medi:segment segcode="GS" xmltag="FunctionalGroupHeader">
+			<!--Functional Identifier Code-->
+			<medi:field xmltag="FunctionalIdentifierCode" />
+			<!--Application Sender's Code-->
+			<medi:field xmltag="ApplicationSenderCode" />
+			<!--Application Receiver's Code-->
+			<medi:field xmltag="ApplicationReceiverCode" />
+			<!--Date-->
+			<medi:field xmltag="Date" />
+			<!--Time-->
+			<medi:field xmltag="Time" />
+			<!--Group Control Number-->
+			<medi:field xmltag="GroupControlNumber" />
+			<!--Responsible Agency Code-->
+			<medi:field xmltag="ResponsibleAgencyCode" />
+			<!--Version/Release/Industry Code-->
+			<medi:field xmltag="VersionReleaseIndustryCode" />
+		</medi:segment>
+		
+		<!--03 ST Segment - Transaction Set Header-->
+		<medi:segment segcode="ST" xmltag="TransactionSetHeader" >
+			<!--Transaction Set Identifier Code-->
+			<medi:field xmltag="TransactionSetIdentifierCode" />
+			<!--Transaction Set Control Number-->
+			<medi:field xmltag="TransactionSetControlNumber" />
+		</medi:segment>
+		
+		<medi:segment segcode="AK1" xmltag="FunctionalGroupResponseHeader" >
+			<!--Functional Identifier Code-->
+			<medi:field xmltag="FunctionalIdentifierCode" />
+			<!--Group Control Number-->
+			<medi:field xmltag="GroupControlNumber" />
+		</medi:segment>
+
+		<medi:segment segcode="AK2" xmltag="TransactionGroupResponseHeader" >
+			<!--Transaction Set Identifier Code-->
+			<medi:field xmltag="TransactionSetIdentifierCode" />
+			<!--Transaction Set Control Number-->
+			<medi:field xmltag="TransactionSetControlNumber" />
+		</medi:segment>
+		
+		<medi:segment segcode="AK5" xmltag="TransactionSetResponseHeader" >
+			<!--Transaction Set Acknowledgement Code-->
+			<medi:field xmltag="TransactionSetAcknowledgementCode" />
+		</medi:segment>	
+		
+		<medi:segment segcode="AK9" xmltag="FunctionalGroupResponseTrailer" >
+			<!--Functional Group Acknowledgement Code-->
+			<medi:field xmltag="TransactionSetAcknowledgementCode" />
+			<!--Number of Transaction Sets Included-->
+			<medi:field xmltag="NumberOfTransactionSetsIncluded" />
+			<!--Number of Received Transactions Sets-->
+			<medi:field xmltag="NumberOfReceivedTransactionsSets" />
+			<!--Number of Accepted Transaction Sets-->
+			<medi:field xmltag="NumberOfAcceptedTransactionSets" />
+		</medi:segment>			
+		<!--29 SE Segment – Transaction Set Trailer-->
+		<medi:segment segcode="SE" xmltag="TransactionSetTrailer" >
+			<!--Number of segments included in the transaction set-->
+			<medi:field xmltag="NumberOfSegments" />
+			<!--Transaction Set Control Number-->
+			<medi:field xmltag="TransactionSetControlNumber" />
+		</medi:segment>
+		
+		<!--30 GE Segment – Functional Group Trailer-->
+		<medi:segment segcode="GE" xmltag="FunctionalGroupTrailer" >
+			<!--Number of Transaction Sets – ST-->
+			<medi:field xmltag="NumberOfTransaction" />
+			<!--Functional Group Control Number-->
+			<medi:field xmltag="FunctionalGroupControlNumber" />
+		</medi:segment>
+		
+		<!--31 IEA – Interchange Control Trailer -->
+		<medi:segment segcode="IEA" xmltag="InterchangeControlTrailer" >
+			<!--Number of Functional Groups Included-->
+			<medi:field xmltag="NumberOfFunctionalGroupsIncluded" />
+			<!--Interchange Control Number-->
+			<medi:field xmltag="InterchangeControlNumber" />
+		</medi:segment>
+	
+	</medi:segments>
+</medi:edimap>

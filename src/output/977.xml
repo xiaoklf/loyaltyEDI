@@ -1,0 +1,63 @@
+<Confirm>
+	<InterchangeControlHeaderDetail>
+		<AuthorizationInformationQualifier>00</AuthorizationInformationQualifier>
+		<AuthorizationInformation>0000000000</AuthorizationInformation>
+		<SecurityInformationQualifier>00</SecurityInformationQualifier>
+		<SecurityInformation>0000000000</SecurityInformation>
+		<InterchangeIDQualifierSender>ZZ</InterchangeIDQualifierSender>
+		<InterchangeSenderID>BI WORLDWIDE   </InterchangeSenderID>
+		<InterchangeIDQualifier>ZZ</InterchangeIDQualifier>
+		<InterchangeReceiverID>0000003257     </InterchangeReceiverID>
+		<InterchangeDate>081121</InterchangeDate>
+		<InterchangeTime>0809</InterchangeTime>
+		<InterchangeControlStandardsIdentifier>U</InterchangeControlStandardsIdentifier>
+		<InterchangeControlVersionNumber>00403</InterchangeControlVersionNumber>
+		<InterchangeControlNumber>326080950</InterchangeControlNumber>
+		<AcknowledgementRequested>0</AcknowledgementRequested>
+		<TestIndicator>T</TestIndicator>
+		<SubElementSeparator>:</SubElementSeparator>
+	</InterchangeControlHeaderDetail>
+	<FunctionalGroupHeader>
+		<FunctionalIdentifierCode>FA</FunctionalIdentifierCode>
+		<ApplicationSenderCode>7172557825</ApplicationSenderCode>
+		<ApplicationReceiverCode>BI WORLDWIDE</ApplicationReceiverCode>
+		<Date>20110105</Date>
+		<Time>1013</Time>
+		<GroupControlNumber>6</GroupControlNumber>
+		<ResponsibleAgencyCode>X</ResponsibleAgencyCode>
+		<VersionReleaseIndustryCode>004030</VersionReleaseIndustryCode>
+	</FunctionalGroupHeader>
+	<TransactionSetHeader>
+		<TransactionSetIdentifierCode>856</TransactionSetIdentifierCode>
+		<TransactionSetControlNumber>0006</TransactionSetControlNumber>
+	</TransactionSetHeader>
+	<FunctionalGroupResponseHeader>
+		<FunctionalIdentifierCode>PO</FunctionalIdentifierCode>
+		<GroupControlNumber>6</GroupControlNumber>
+	</FunctionalGroupResponseHeader>
+	<TransactionGroupResponseHeader>
+		<TransactionSetIdentifierCode>856</TransactionSetIdentifierCode>
+		<TransactionSetControlNumber>0006</TransactionSetControlNumber>
+	</TransactionGroupResponseHeader>
+	<TransactionSetResponseHeader>
+		<TransactionSetAcknowledgementCode>A</TransactionSetAcknowledgementCode>
+	</TransactionSetResponseHeader>
+	<FunctionalGroupResponseTrailer>
+		<TransactionSetAcknowledgementCode>A</TransactionSetAcknowledgementCode>
+		<NumberOfTransactionSetsIncluded>1</NumberOfTransactionSetsIncluded>
+		<NumberOfReceivedTransactionsSets>1</NumberOfReceivedTransactionsSets>
+		<NumberOfAcceptedTransactionSets>1</NumberOfAcceptedTransactionSets>
+	</FunctionalGroupResponseTrailer>
+	<TransactionSetTrailer>
+		<NumberOfSegments>16</NumberOfSegments>
+		<TransactionSetControlNumber>0006</TransactionSetControlNumber>
+	</TransactionSetTrailer>
+	<FunctionalGroupTrailer>
+		<NumberOfTransaction>1</NumberOfTransaction>
+		<FunctionalGroupControlNumber>6</FunctionalGroupControlNumber>
+	</FunctionalGroupTrailer>
+	<InterchangeControlTrailer>
+		<NumberOfFunctionalGroupsIncluded>1</NumberOfFunctionalGroupsIncluded>
+		<InterchangeControlNumber>000000011</InterchangeControlNumber>
+	</InterchangeControlTrailer>
+</Confirm>

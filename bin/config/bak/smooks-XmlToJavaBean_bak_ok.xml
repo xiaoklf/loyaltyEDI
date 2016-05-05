@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+<!-- createOnElement and beanId case sensitive -->
+<!-- createOnElement should be the same name as xml file tag -->
+  <jb:bean beanId="order" class="pojo.Order" createOnElement="Order">
+    <jb:wiring beanIdRef="interchangeControlHeaderDetail" property="interchangeControlHeaderDetail" />
+  </jb:bean>
+  <jb:bean beanId="interchangeControlHeaderDetail" class="pojo.InterchangeControlHeaderDetail" createOnElement="InterchangeControlHeaderDetail">
+    <jb:value data="/Order/InterchangeControlHeaderDetail/AcknowledgementRequested" property="acknowledgementRequested"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/AuthorizationInformation" property="authorizationInformation"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/AuthorizationInformationQualifier" property="authorizationInformationQualifier"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeControlNumber" property="interchangeControlNumber"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeControlStandardsIdentifier" property="interchangeControlStandardsIdentifier"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeControlVersionNumber" property="interchangeControlVersionNumber"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeDate" property="interchangeDate"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeIDQualifier" property="interchangeIDQualifier"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeIDQualifierSender" property="interchangeIDQualifierSender"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeReceiverID" property="interchangeReceiverID"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeSenderID" property="interchangeSenderID"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/InterchangeTime" property="interchangeTime"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/SecurityInformation" property="securityInformation"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/SecurityInformationQualifier" property="securityInformationQualifier"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/SubElementSeparator" property="subElementSeparator"/>
+    <jb:value data="/Order/InterchangeControlHeaderDetail/TestIndicator" property="testIndicator"/>
+  </jb:bean>
+</smooks-resource-list>

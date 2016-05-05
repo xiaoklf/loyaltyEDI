@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shipped_orders>
+    <order>
+        <po_number>0000770562</po_number>     
+     	<first_name>John</first_name>
+     	<last_name>Doe</last_name>       
+        <client_street>XYZ Company</client_street>        
+        <client_city>Edina</client_city>        
+        <client_province>MN</client_province>        
+        <client_postal_code>55439</client_postal_code>     
+        <client_order_id></client_order_id>
+        <client_other_id></client_other_id>
+        <client_number></client_number>
+        <client_product_number></client_product_number>   
+        <quantity>1.0000</quantity>        
+        <ls_product_id>47LB6300</ls_product_id>        
+        <product_title>BABY STROLLER</product_title>   
+        <cost></cost>
+        <shipping_cost></shipping_cost>
+        <tracking_number></tracking_number>
+        <shipping_company></shipping_company>
+        <shipped_date></shipped_date>     
+    </order>
+</shipped_orders>

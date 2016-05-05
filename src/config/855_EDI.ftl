@@ -1,0 +1,11 @@
+ISA*${AuthorizationInformationQualifier}*${AuthorizationInformation}*${SecurityInformationQualifier}*${SecurityInformation}*${InterchangeIDQualifierSender}*${InterchangeSenderID}*${InterchangeIDQualifier}*${InterchangeIDQualifierSender}*${InterchangeSenderID}*${InterchangeIDQualifier}*${InterchangeReceiverID}*${InterchangeDate}*${InterchangeTime}*${InterchangeControlStandardsIdentifier}*${InterchangeControlVersionNumber}*${InterchangeControlNumber}*${AcknowledgementRequested}*${TestIndicator}*>~
+GS*PR*${ApplicationSenderCode}*${ApplicationReceiverCode}*${Date}*${Time}*${GroupControlNumber}*${ResponsibleAgencyCode}*${Version}~
+ST*855*${TransactionSetControlNumber}~
+BAK**AC*${PurchaseOrderNumber}*${Date}*${ExpectedShipDate}~
+REF**${PurchaseOrderNumber}~
+PO1*${AssignedIdentification}*${QuantityOrdered}*${UnitOfMeasure}*${UnitPrice}*${BasisOfUnitPriceCode}*${ProductQualifier}*${ProductIDVendor}*${ProductQualifier}*${ProductID}*${ProductQualifier}*${UPCCode}~
+ACK*${LineItemStatusCode}*${Quantity}***${ExpectedShipDate}~
+CTT*${NumberOfLineItems}~
+SE*${NumberOfIncludedSegments}*${TransactionSetControlNumber}~
+GE*${NumberOfTransactionSetsIncluded}*${GroupControlNumber}~
+IEA*${NumberOfFunctionalGroupsIncluded}*${InterchangeControlNumber}~

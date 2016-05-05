@@ -1,0 +1,10 @@
+ISA*${AuthorizationInformationQualifier}*${AuthorizationInformation}*${SecurityInformationQualifier}*${SecurityInformation}*${InterchangeIDQualifierSender}*${InterchangeSenderID}*${InterchangeIDQualifier}*${InterchangeIDQualifierSender}*${InterchangeSenderID}*${InterchangeIDQualifier}*${InterchangeReceiverID}*${InterchangeDate}*${InterchangeTime}*${InterchangeControlStandardsIdentifier}*${InterchangeControlVersionNumber}*${InterchangeControlNumber}*${AcknowledgementRequested}*${TestIndicator}*>~
+GS*FA*${ApplicationSenderCode}*${ApplicationReceiverCode}*${Date}*${Time}*${GroupControlNumber}*${ResponsibleAgencyCode}*${Version}~
+ST*${TransactionSetIdentifierCode}*${TransactionSetControlNumber}~
+AK1*${FunctionalIdentifierCode}*${GroupControlNumber}~
+AK2*${TransactionSetIdentifierCode}*${TransactionSetControlNumber}~
+AK5*${TransactionSetAcknowledgementCode}~
+AK9*${FunctionalGroupAcknowledgementCode}*${NumberOfTransactionSetsIncluded}*${NumberOfReceivedTransactionsSets}*${NumberOfAcceptedTransactionSets}~
+SE*${NumberOfIncludedSegments}*${TransactionSetControlNumber}~
+GE*${NumberOfTransactionSetsIncluded}*${GroupControlNumber}~
+IEA*${NumberOfFunctionalGroupsIncluded}*${InterchangeControlNumber}~
